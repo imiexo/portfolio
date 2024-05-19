@@ -1,32 +1,128 @@
+html {
+    scroll-padding-top: 200px; /* height of sticky header */
+}
+  
 body {
     margin: 0;
 }
 
-ul {
+header {
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #f7f0e1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;  /* specify the stack order; header should remain on top */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
-li a{
-    display: inline-flex;
-    margin-left: 20px;
+nav li {
+    margin-left: 2em;
+}
+    
+nav a {
+    text-decoration: none;
+    color: #c6a15b;
 }
 
-.container {
-    margin: 0 auto;
+nav a:hover,
+nav a:focus {
+    color: #5e4c37;
 }
-.sidebar {
-    padding: 50px 0px;
+
+nav a:active {
+    color: #4990e2;
 }
-.avatar {
-    text-align: center;
+
+.home {
+    height: 100vh;
+    padding: 20px 50px;
+    margin: 20% auto;
 }
-.avatar img {
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.home-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.main-color {
+    color: #c6a15b;
+}
+
+.home-socials {
+    display: flex;
+    margin: 50px 0;
+}
+
+.home-socials-icon {
+    color: #c6a15b;
+    margin-right: 10px;
+}
+.home-img {
+    background-color: #c6a15b;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
+    margin-right: 10%;
+    box-shadow: 0 1px 4px rgba(198,161,91, 0.25);
+
+}
+.home-img img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+
+}
+.button {
+    background-color: #c6a15b;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: 600;
+    color: #fff !important;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+button:hover {
+    background-color: #5e4c37;
 }
 
+.progress-bar {
+    background-color: #c6a15b !important;
+}
 
-.content {
-    background-color: yellow;
+.margin-bottom-25 {
+    margin-bottom: 25px;
+}
+
+/* styles applied to smaller screens */
+@media screen and (max-width: 640px) {
+    nav ul,
+    .home-content {
+        flex-direction: column
+    }
+    .home {
+        margin: 40% auto;
+    }
+    .card {
+        margin-top: 15px;
+    }
 }
